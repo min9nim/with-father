@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <textarea
         className={`text-${size} border`}
-        style={{ height: 'calc(100vh - 100px)' }}
+        style={{ height: 'calc(100vh - 105px)' }}
         onChange={e => setValue(e.target.value)}
         value={value}
         autoFocus
