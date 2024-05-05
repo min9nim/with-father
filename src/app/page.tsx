@@ -6,13 +6,17 @@ import { useRef, useState } from 'react'
 export default function Home() {
   const textareaRef = useRef(null)
   const [value, setValue] = useState('')
-  const [size, setSize] = useState('5xl')
+  const [size, setSize] = useState('4xl')
   return (
     <main className="flex flex-col p-4 gap-2">
       <div className="flex gap-2">
         <span>Size: </span>
         <Radio
           options={[
+            {
+              label: '3xl',
+              value: '3xl',
+            },
             {
               label: '4xl',
               value: '4xl',
@@ -24,10 +28,6 @@ export default function Home() {
             {
               label: '6xl',
               value: '6xl',
-            },
-            {
-              label: '7xl',
-              value: '7xl',
             },
           ]}
           value={size}
