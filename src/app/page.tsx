@@ -35,7 +35,7 @@ export default function Home() {
         />
       </div>
       <textarea
-        className={`text-${size} border`}
+        className={`text-${size} border p-2`}
         style={{ height: 'calc(100vh - 105px)' }}
         onChange={e => setValue(e.target.value)}
         value={value}
