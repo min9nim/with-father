@@ -38,7 +38,11 @@ export default function Home() {
         ref={textareaRef}
         rows={5}
         className={`text-${size} border p-2`}
-        style={{ height: 'auto', overflow: 'auto' }}
+        style={{
+          height: 'auto',
+          overflow: 'auto',
+          maxHeight: 'calc(100vh - 120px)',
+        }}
         onChange={e => {
           setValue(e.target.value)
 
