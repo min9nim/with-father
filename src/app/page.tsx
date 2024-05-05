@@ -1,9 +1,10 @@
 'use client'
 
 import Radio from '@/components/Radio'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 export default function Home() {
+  const textareaRef = useRef(null)
   const [value, setValue] = useState('')
   const [size, setSize] = useState('5xl')
   console.log({ size })
@@ -35,9 +36,17 @@ export default function Home() {
         />
       </div>
       <textarea
+        ref={textareaRef}
         className={`text-${size} border p-2`}
-        style={{ height: 'calc(100vh - 105px)' }}
-        onChange={e => setValue(e.target.value)}
+        style={{ height: 'auto', overflow: 'auto' }}
+        onChange={e => {
+          setValue(e.target.value)
+
+          let textarea: any = textareaRef.current
+          if (textarea) {
+            textarea.style.height = `${textarea.scrollHeight}px`
+          }
+        }}
         value={value}
         autoFocus
       />
