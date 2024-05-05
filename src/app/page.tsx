@@ -9,25 +9,31 @@ export default function Home() {
   console.log({ size })
   return (
     <main className="flex flex-col p-4 gap-2">
-      <Radio
-        options={[
-          {
-            label: '4xl',
-            value: '4xl',
-          },
-          {
-            label: '5xl',
-            value: '5xl',
-          },
-          {
-            label: '6xl',
-            value: '6xl',
-          },
-        ]}
-        value={size}
-        setValue={setSize}
-      />
-
+      <div className="flex gap-2">
+        <span>Size: </span>
+        <Radio
+          options={[
+            {
+              label: '4xl',
+              value: '4xl',
+            },
+            {
+              label: '5xl',
+              value: '5xl',
+            },
+            {
+              label: '6xl',
+              value: '6xl',
+            },
+            {
+              label: '7xl',
+              value: '7xl',
+            },
+          ]}
+          value={size}
+          setValue={setSize}
+        />
+      </div>
       <textarea
         className={`text-${size} border`}
         style={{ height: 'calc(100vh - 100px)' }}
