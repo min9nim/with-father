@@ -41,7 +41,7 @@ export default function Home() {
         style={{
           height: 'auto',
           overflow: 'auto',
-          maxHeight: 'calc(100vh - 120px)',
+          maxHeight: 'calc(100vh - 150px)',
         }}
         onChange={e => {
           setValue(e.target.value)
