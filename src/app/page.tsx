@@ -7,7 +7,6 @@ export default function Home() {
   const textareaRef = useRef(null)
   const [value, setValue] = useState('')
   const [size, setSize] = useState('5xl')
-  console.log({ size })
   return (
     <main className="flex flex-col p-4 gap-2">
       <div className="flex gap-2">
@@ -37,6 +36,7 @@ export default function Home() {
       </div>
       <textarea
         ref={textareaRef}
+        rows={5}
         className={`text-${size} border p-2`}
         style={{ height: 'auto', overflow: 'auto' }}
         onChange={e => {
